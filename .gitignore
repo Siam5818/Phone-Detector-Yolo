@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env & secrets
+.env
+
+# Models & detections (fichiers volumineux/binaires, versionnés autrement)
+models/*.pt
+detections/*.jpg
+detections/*.png
+
+# IDE
+.vscode/
