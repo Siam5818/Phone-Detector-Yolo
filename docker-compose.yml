@@ -1,0 +1,10 @@
+services:
+  phone-detector:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./detections:/app/detections
+      - ./models:/app/models
