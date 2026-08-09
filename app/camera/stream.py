@@ -10,7 +10,7 @@ class CameraStream:
         self._capture: cv2.VideoCapture | None = None
 
     def __enter__(self) -> "CameraStream":
-        self._capture = cv2.VideoCapture(self.source)
+        self._capture = cv2.VideoCapture(self.source, cv2.CAP_DSHOW)
         if not self._capture.isOpened():
             raise RuntimeError(f"Unable to open camera source: {self.source}")
         return self
